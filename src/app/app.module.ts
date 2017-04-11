@@ -3,22 +3,23 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { appRoutes } from './routes/routes';
+import { AppRoutingModule } from './routes/app.routing';
+import { PlayersModule } from './players/players.module';
+import { TeamsModule } from './teams/teams.module';
+
 import { AppComponent } from './app.component';
-import { TeamListComponent } from './teams/team-list/team-list.component';
-import { PlayerListComponent } from './players/player-list/player-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TeamListComponent,
-    PlayerListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    TeamsModule,
+    PlayersModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

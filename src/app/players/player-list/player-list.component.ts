@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 
 export class PlayerListComponent {
 
+    title: string = 'player list';
     constructor() {
 
     }

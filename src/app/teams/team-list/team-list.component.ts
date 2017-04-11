@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./team-list.component.css']
 })
 export class TeamListComponent {
-    title: string = 'Team-list';
+    title: string = 'team list';
     constructor() {
 
     }
