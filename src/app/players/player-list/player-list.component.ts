@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { Player } from './../shared/player';
+import { MOCK_PLAYERS } from './../shared/mock-players';
 
 @Component({
     selector: 'player-list',
@@ -6,11 +9,18 @@ import { Component } from '@angular/core';
     styleUrls: ['./player-list.component.css']
 })
 
-export class PlayerListComponent {
+export class PlayerListComponent implements OnInit {
 
-    title: string = 'player list';
+    listOfPlayers: Player[];
+    title: string = 'Players';
+
     constructor() {
 
+    }
+    ngOnInit() {
+        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+        //Add 'implements OnInit' to the class.
+        this.listOfPlayers = MOCK_PLAYERS;
     }
 
 }
