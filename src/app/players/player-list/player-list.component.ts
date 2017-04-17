@@ -13,6 +13,7 @@ export class PlayerListComponent implements OnInit {
 
     listOfPlayers: Player[];
     title: string = 'Players';
+    selectedPlayer: Player;
 
     constructor(private apiService: RestApiService) {
 
@@ -21,6 +22,10 @@ export class PlayerListComponent implements OnInit {
         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         //Add 'implements OnInit' to the class.
         this.listOfPlayers = this.apiService.getListOfPlayers();
+    }
+
+    setSelectedPlayer(selectedPlayer: Player) {
+        this.selectedPlayer = selectedPlayer;
     }
 
 }

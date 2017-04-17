@@ -8,10 +8,12 @@ import { PlayersModule } from './players/players.module';
 import { TeamsModule } from './teams/teams.module';
 
 import { AppComponent } from './app.component';
+import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainNavigationComponent
   ],
   imports: [
     BrowserModule,
