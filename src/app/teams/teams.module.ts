@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from './../common/common.module';
 
 import { TeamListComponent } from './team-list/team-list.component';
+import { TeamEditComponent } from './team-edit/team-edit.component';
 import { TeamsRoutingModule } from './teams.routing';
 
 @NgModule({
@@ -14,7 +15,8 @@ import { TeamsRoutingModule } from './teams.routing';
         CommonModule
     ],
     declarations: [
-        TeamListComponent
+        TeamListComponent,
+        TeamEditComponent
     ]
 })
 

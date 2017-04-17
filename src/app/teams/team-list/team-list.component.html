@@ -4,19 +4,29 @@
     <thead>
         <tr>
             <th>Team name</th>
-            <th>Number of Wins</th>
-            <th>Number of Losses</th>
-            <th>Win %</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Winning %</th>
             <th>Games Behind</th>
+            <th>&nbsp;</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let team of listOfTeams">
+        <tr *ngFor="let team of listOfTeams" >
             <td>{{team.teamName}}</td>
             <td>{{team.numberOfWins}}</td>
             <td>{{team.numberOfLosses}}</td>
             <td>{{team.winPercentage}}</td>
             <td>{{team.gamesBehind}}</td>
+            <td>
+                <a (click)="selectTeam(team)">
+                    <i class="fa fa-edit"></i>
+                </a>
+            </td>
         </tr>
     </tbody>
 </table>
+
+<br>
+
+<team-edit [selectedTeam]="selectedTeam"></team-edit>

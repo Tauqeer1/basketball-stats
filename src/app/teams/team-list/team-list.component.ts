@@ -12,10 +12,14 @@ export class TeamListComponent implements OnInit {
     
     title: string = 'teams';
     listOfTeams: Team[];
+    selectedTeam: Team;
     constructor(private apiService: RestApiService) {
 
     }
     ngOnInit() {
         this.listOfTeams = this.apiService.getListOfTeams();
+    }
+    selectTeam(team: Team) {
+        this.selectedTeam = team;
     }
 }
