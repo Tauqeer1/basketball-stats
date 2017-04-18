@@ -5,7 +5,7 @@ import { CommonModule } from './../common/common.module';
 
 import { PlayerListComponent } from './player-list/player-list.component';
 import { PlayersProfileComponent } from './players-profile/players-profile.component';
-
+import { RegistrationComponent } from './registration/registration.component';
 import { PlayersRoutingModule } from './players.routing';
 
 @NgModule({
@@ -17,7 +17,8 @@ import { PlayersRoutingModule } from './players.routing';
     ],
     declarations: [
         PlayerListComponent,
-        PlayersProfileComponent
+        PlayersProfileComponent,
+        RegistrationComponent
     ]
 })
 
